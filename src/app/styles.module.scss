@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 215px 0 104px;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #42567a;
+    opacity: 0.1;
+    @media (max-width: 768px) {
+      content: none;
+    }
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 100px 0 100px;
+  }
+  @media (max-width: 768px) {
+    padding: 59px 20px 13px;
+  }
+}
+
+.wrapper {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(calc(-50%));
+    height: 1px;
+    width: 100%;
+    background-color: #42567a;
+    opacity: 0.1;
+    @media (max-width: 768px) {
+      content: none;
+    }
+  }
+}
+
+.sliderWrapper {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.centerStroke {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: #42567a;
+  opacity: 0.1;
+}
